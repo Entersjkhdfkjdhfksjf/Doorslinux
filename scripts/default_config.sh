@@ -42,16 +42,14 @@ function customize_image() {
     # install graphics and desktop
     apt update
     apt-get install -y \
-    kde-plasma-desktop
+    cinnamon-desktop-environment
     
 
     # useful tools
     apt-get install -y \
     clamav-daemon \
-    terminator \
     apt-transport-https \
     curl \
-    vim \
     nano \
     less
 
