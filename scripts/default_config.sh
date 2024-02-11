@@ -40,9 +40,15 @@ export TARGET_PACKAGE_REMOVE="
 # present on the installed system.
 function customize_image() {
     # install graphics and desktop
+    apt update
+    add-apt-repository ppa:elementary-os/os-patches
+    add-apt-repository ppa:elementary-os/daily 
+    apt update
     apt-get install -y \
-    vanilla-gnome-desktop \
-    vanilla-gnome-default-settings
+    apt install software-properties-common \
+    apt install elementary-icon-theme elementary-default-settings elementary-desktop
+    
+    
 
     # useful tools
     apt-get install -y \
