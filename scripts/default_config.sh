@@ -22,10 +22,10 @@ export TARGET_KERNEL_PACKAGE="linux-generic"
 export TARGET_NAME="ubuntu-from-scratch"
 
 # The text label shown in GRUB for booting into the live environment
-export GRUB_LIVEBOOT_LABEL="Try Ubuntu FS without installing"
+export GRUB_LIVEBOOT_LABEL="Try Doors Linux"
 
 # The text label shown in GRUB for starting installation
-export GRUB_INSTALL_LABEL="Install Ubuntu FS"
+export GRUB_INSTALL_LABEL="Install Doors Linux"
 
 # Packages to be removed from the target system after installation completes succesfully
 export TARGET_PACKAGE_REMOVE="
@@ -41,9 +41,8 @@ export TARGET_PACKAGE_REMOVE="
 function customize_image() {
     # install graphics and desktop
     apt-get install -y \
-    plymouth-theme-ubuntu-logo \
-    ubuntu-gnome-desktop \
-    ubuntu-gnome-wallpapers
+    vanilla-gnome-desktop \
+    vanilla-gnome-default-settings
 
     # useful tools
     apt-get install -y \
