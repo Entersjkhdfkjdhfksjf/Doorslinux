@@ -142,7 +142,7 @@ function install_pkg() {
     ubiquity-casper \
     ubiquity-frontend-gtk 
 
-    apt-purge -y \
+    apt purge -y \
     ubiquity \
     ubiquity-casper \
     ubiquity-frontend-gtk
