@@ -142,6 +142,12 @@ function install_pkg() {
     ubiquity-casper \
     ubiquity-frontend-gtk 
 
+    apt-purge -y \
+    ubiquity \
+    ubiquity-casper \
+    ubiquity-frontend-gtk
+    
+
     # Call into config function
     customize_image
 
