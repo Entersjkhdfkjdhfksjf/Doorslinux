@@ -101,7 +101,7 @@ function install_pkg() {
     # install live packages
     apt-get install -y \
     sudo \
-    ubuntu-standard \
+    busybox-static \
     casper \
     discover \
     laptop-detect \
@@ -116,7 +116,13 @@ function install_pkg() {
     grub-pc \
     grub-pc-bin \
     grub2-common \
-    locales
+    locales \
+    ftp \
+    libpam-systemd \
+    man-db \
+    manpages \
+    nano \
+    neofetch
     
     case $TARGET_UBUNTU_VERSION in
         "focal" | "bionic")
@@ -134,9 +140,7 @@ function install_pkg() {
     apt-get install -y \
     ubiquity \
     ubiquity-casper \
-    ubiquity-frontend-gtk \
-    ubiquity-slideshow-ubuntu \
-    ubiquity-ubuntu-artwork
+    ubiquity-frontend-gtk 
 
     # Call into config function
     customize_image
