@@ -41,13 +41,8 @@ export TARGET_PACKAGE_REMOVE="
 function customize_image() {
     # install graphics and desktop
     apt update
-    add-apt-repository ppa:elementary-os/os-patches
-    add-apt-repository ppa:elementary-os/daily 
-    apt update
     apt-get install -y \
-    apt install software-properties-common \
-    apt install elementary-icon-theme elementary-default-settings elementary-desktop
-    
+    kde-plasma-desktop
     
 
     # useful tools
@@ -68,7 +63,9 @@ function customize_image() {
     gnome-mines \
     gnome-sudoku \
     aisleriot \
-    hitori
+    hitori \
+    libreoffice 
+    
 }
 
 # Used to version the configuration.  If breaking changes occur, manual
