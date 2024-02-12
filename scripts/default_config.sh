@@ -43,6 +43,7 @@ function customize_image() {
     apt update
     apt-get install -y \
     cinnamon-desktop-environment
+    plymouth-theme-breeze
     
 
     # useful tools
