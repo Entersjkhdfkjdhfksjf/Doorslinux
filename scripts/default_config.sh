@@ -42,7 +42,8 @@ function customize_image() {
     # install graphics and desktop
     apt update
     apt-get install -y \
-    kde-plasma-desktop
+    kde-plasma-desktop \
+    plymouth-theme-breeze
     
 
     # useful tools
