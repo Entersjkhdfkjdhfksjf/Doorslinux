@@ -40,6 +40,18 @@ export TARGET_PACKAGE_REMOVE="
 # present on the installed system.
 function customize_image() {
     # install graphics and desktop
+	rm /etc/os-release
+ 	touch /etc/os-release
+    echo "NAME=Doors Linux" > /etc/os-release
+    echo "VERSION_ID=5.0" > /etc/os-release
+    rm /usr/lib/os-release
+    touch /etc/os-release
+    echo "NAME=Doors Linux" > /usr/lib/os-release
+    echo "VERSION_ID=5.0" > /usr/lib/os-release
+    cat /usr/lib/os-release
+    cat /etc/os-release
+    
+    
     apt update
     apt-get install -y \
     gnome-session \
